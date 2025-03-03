@@ -32,6 +32,6 @@ function buttonInput(){
     newTask.appendChild(liEle);
     todoInput.value = "";
 }
-function update(){
-    
+function update(event){
+    console.log(event);
 }
