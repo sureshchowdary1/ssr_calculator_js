@@ -1,1 +1,4 @@
-1.
+1. Need to creare a input
+2. Need to create a div which shows the dynamic values.
+3. Need to add the value on the submit.
+4. Need to delete the value on clicking Delete.
