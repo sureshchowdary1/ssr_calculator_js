@@ -1,12 +1,22 @@
-let todoInput = document.getElementsByClassName("todoInput");
-let todoOutput = document.getElementsByClassName("todoOutput");
+let todoInput = document.querySelector(".todoInput");
 let newTask = document.getElementById("newTask");
 
-function createLi(input){
+function createLi(value){
     let li = document.createElement("li");
-    li.innerHTML = input;
+    let btn = document.createElement("button");
+    let spn = document.createElement("span");
+    //li.innerHTML = value;
+    spn.innerHTML = value;
+    btn.innerText = "Delete";
+    li.append(spn);
+    li.append(btn);
+    btn.onclick = function(){
+        li.remove();
+    }
+    return li;
 }
 
 function buttonInput(){
-    createLi(todoInput.value);
+    let liEle = createLi(todoInput.value);
+    newTask.appendChild(liEle);
 }
