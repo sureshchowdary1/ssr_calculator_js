@@ -17,9 +17,13 @@ function createLi(valv){
     btn.onclick = function(){
         li.remove();
     }
-    edt.onclick = function(){
+    edt.onclick = function(event){
         editText.value = valv;
+        console.log(event);
+        console.log(event.target);
     }
+    li.setAttribute("id","groot"+Math.random()*78);
+    console.log(li);
     return li;
 }
 
