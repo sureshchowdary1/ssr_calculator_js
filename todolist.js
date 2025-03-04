@@ -36,7 +36,6 @@ function buttonInput(){
     todoInput.value = "";
 }
 function update(event){
-    
-
+    let inputValv = document.querySelector(".editText").value;
     
 }
