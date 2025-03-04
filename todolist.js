@@ -37,5 +37,7 @@ function buttonInput(){
 }
 function update(event){
     let inputValv = document.querySelector(".editText").value;
+    let evTgt = event.target.closest(".editText");
+    let id = evTgt.getAttribute("idText");
     
 }
