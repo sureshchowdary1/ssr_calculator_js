@@ -4,6 +4,7 @@ let editText = document.querySelector(".editText");
 
 function createLi(valv){
     let li = document.createElement("li");
+    li.setAttribute("class","liClass");
     let btn = document.createElement("button");
     let spn = document.createElement("span");
     let edt = document.createElement("button");
@@ -19,8 +20,11 @@ function createLi(valv){
     }
     edt.onclick = function(event){
         editText.value = valv;
-        console.log(event);
-        console.log(event.target);
+        let evTgt = event.target.closest(".liClass");
+        let id = evTgt.getAttribute("id");
+        console.log(id);
+        editText.setAttribute("idText",id);
+        console.log(editText);
     }
     li.setAttribute("id","groot"+Math.random()*78);
     console.log(li);
@@ -33,5 +37,7 @@ function buttonInput(){
     todoInput.value = "";
 }
 function update(event){
-    console.log(event);
+    editText.value
+
+    
 }
