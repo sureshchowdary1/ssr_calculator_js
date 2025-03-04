@@ -25,7 +25,7 @@ function createLi(valv){
         editText.setAttribute("idText",id);
         console.log(editText);
     }
-    li.setAttribute("id","groot"+Math.random()*78);
+    li.setAttribute("id","groot"+Math.round(Math.random()*78));
     console.log(li);
     return li;
 }
@@ -39,4 +39,5 @@ function update(event){
     let inputValv = document.querySelector(".editText").value;
     let idText = editText.getAttribute("idText");
     document.querySelector(`#${idText}`).querySelector("span").innerHTML = inputValv;
+    inputValv = "";
 }
