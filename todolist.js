@@ -36,7 +36,7 @@ function buttonInput(){
     todoInput.value = "";
 }
 function update(event){
-    console.log(event);
+    
 
     
 }
