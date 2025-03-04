@@ -6,6 +6,7 @@ function createLi(valv){
     let li = document.createElement("li");
     li.setAttribute("class","liClass");
     let btn = document.createElement("button");
+    btn.setAttribute("class","btnClass");
     let spn = document.createElement("span");
     let edt = document.createElement("button");
     //li.innerHTML = value;
@@ -15,7 +16,12 @@ function createLi(valv){
     li.append(spn);
     li.append(btn);
     li.append(edt);
-    btn.onclick = function(){
+    btn.onclick = function(event){
+        let eventTarget = event.target.closest(".btnClass");
+        let id = eventTarget.getAttribute("id");
+        btn.setAttribute("idBtn",id);
+        console.log(id);
+        console.log(btn);
         li.remove();
     }
     edt.onclick = function(event){
