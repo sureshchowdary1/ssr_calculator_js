@@ -38,5 +38,5 @@ function buttonInput(){
 function update(event){
     let inputValv = document.querySelector(".editText").value;
     let idText = editText.getAttribute("idText");
-    document.querySelector(".liClass").querySelector("spn").innerHTML = 
+    document.querySelector(`#${idText}`).querySelector("span").innerHTML = inputValv;
 }
