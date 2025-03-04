@@ -26,7 +26,8 @@ function createLi(valv){
         console.log(editText);
     }
     li.setAttribute("id","groot"+Math.round(Math.random()*78));
-    console.log(li);
+    let idValue = li.getAttribute("id");
+    let spnValue = spn.innerText;
     return li;
 }
 
@@ -36,8 +37,8 @@ function buttonInput(){
     todoInput.value = "";
 }
 function update(event){
-    let inputValv = document.querySelector(".editText").value;
+    let inputValv = document.querySelector(".editText");
     let idText = editText.getAttribute("idText");
-    document.querySelector(`#${idText}`).querySelector("span").innerHTML = inputValv;
-    inputValv = "";
+    document.querySelector(`#${idText}`).querySelector("span").innerHTML = inputValv.value;
+    inputValv.value = "";
 }
