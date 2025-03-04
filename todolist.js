@@ -15,19 +15,13 @@ function createLi(valv){
     li.append(spn);
     li.append(btn);
     li.append(edt);
-    btn.onclick = function(event){
-        let eventTarget = event.target.closest(".liClass");
-        let id = eventTarget.getAttribute("id");
-        btn.setAttribute("idBtn",id);
-        console.log(id);
-        console.log(btn);
+    btn.onclick = function(){
         li.remove();
     }
     edt.onclick = function(event){
         editText.value = valv;
         let evTgt = event.target.closest(".liClass");
         let id = evTgt.getAttribute("id");
-        console.log(id);
         editText.setAttribute("idText",id);
         console.log(editText);
     }
@@ -42,7 +36,7 @@ function buttonInput(){
     todoInput.value = "";
 }
 function update(event){
-    editText.value
+    console.log(event);
 
     
 }
