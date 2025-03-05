@@ -1,12 +1,47 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .todo{
     display:flex;
-    flex-direction: row;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     padding:5px;
     gap:5px;
 }
+button,input{
+    padding:5px;
+    border-radius: 5px;
+}
 .todoInput{
     border:1px solid black;
     border-radius:2px;
+}
+li{
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1;
+    gap:10px;
+    padding-bottom:10px;
+}
+li>span{
+    min-width:200px;
+}
+li>button{
+    background-color: red;
+    border-radius:4px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgb(47, 7, 7);
+    padding:5px 15px;
+}
+li>button:nth-child(3){
+    background-color: blue;
+    color: white;
+}
+.active{
+    display:none;
 }

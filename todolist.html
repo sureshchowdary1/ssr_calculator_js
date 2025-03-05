@@ -8,13 +8,16 @@
 </head>
 <body>
     <div class="todo">
-        <input class="todoInput" type="text" placeholder="Todo list item here...">
-        <button onclick="buttonInput()">Add List Item</button>
+        <div>
+            <input class="todoInput" type="text" placeholder="Todo list item here...">
+            <button onclick="buttonInput()">Add List Item</button>
+        </div>
+        <div>
+            <input class="editText" type="text">
+            <button onclick="update(event)">Update</button>
+        </div>
     </div>
-    <div class="todo">
-        <input type="text" class="editText">
-        <button onclick="update(event)">Update</button>
-    </div>
+    
     <div>
         <ul id="newTask"></ul>
     </div>

@@ -1,6 +1,7 @@
 let todoInput = document.querySelector(".todoInput");
 let newTask = document.getElementById("newTask");
 let editText = document.querySelector(".editText");
+let arr = [];
 
 function createLi(valv){
     let li = document.createElement("li");
@@ -11,6 +12,7 @@ function createLi(valv){
     //li.innerHTML = value;
     spn.innerHTML = valv;
     btn.innerText = "Delete";
+    btn.setAttribute("id","delBtn");
     edt.innerText = "Edit";
     li.append(spn);
     li.append(btn);
@@ -23,11 +25,12 @@ function createLi(valv){
         let evTgt = event.target.closest(".liClass");
         let id = evTgt.getAttribute("id");
         editText.setAttribute("idText",id);
-        console.log(editText);
     }
-    li.setAttribute("id","groot"+Math.round(Math.random()*78));
+    li.setAttribute("id","groot"+Math.round(Math.random()*123));
     let idValue = li.getAttribute("id");
     let spnValue = spn.innerText;
+    arr.push({idValue,spnValue});
+    localStorage.setItem("groot",JSON.stringify(arr));
     return li;
 }
 
